@@ -1,0 +1,76 @@
+.design {
+  &__title {
+    padding: 140px 0 80px 0;
+    text-align: center;
+    color: #282b22;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 57.5px;
+  }
+
+  &__control {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 29px;
+    padding-bottom: 140px;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    border-left: 1px solid #282b2259;
+  }
+  &__number {
+    padding-bottom: 60px;
+    color: #282b2261;
+  }
+
+  &__text {
+    padding-bottom: 30px;
+    color: #3d4a39;
+  }
+  &__img {
+    // width: 354px;
+    // height: 320px;
+    background: #3d4a391a;
+  }
+  br {
+    display: none;
+  }
+}
+
+@include mobile-large {
+  .design {
+    br {
+        display: block;
+    }
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include tablet {
+  .design {
+    
+    br {
+        display: none;
+    }
+    &__control {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+@include desktop {
+  .design {
+    
+    br {
+        display: none;
+    }
+    &__control {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
